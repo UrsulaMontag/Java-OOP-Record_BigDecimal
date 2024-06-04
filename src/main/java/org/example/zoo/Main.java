@@ -1,4 +1,7 @@
-package org.example;
+package org.example.zoo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,10 +25,18 @@ public class Main {
         Animal animal6 = new Animal(5, "Wum", dog, 12, owner2);
         Animal animal7 = new Animal(6, "Dubbl", fish, 20, owner3);
         Animal animal8 = new Animal(7, "Daisy", goose, 15, owner3);
+        List<Animal> animals = new ArrayList<>();
+        animals.add(animal1);
+        animals.add(animal2);
+        animals.add(animal3);
+        animals.add(animal4);
+        animals.add(animal5);
+        animals.add(animal6);
+        animals.add(animal7);
+        animals.add(animal8);
+        System.out.println(animals);
 
-        System.out.println(animal1);
-        System.out.println(animal1.equals(animal2));
-        System.out.println(animal1.name());
-
+        Zoo myZoo = new Zoo(animals);
+        System.out.println(myZoo.totalFoodReqGrPerDay());
     }
 }
