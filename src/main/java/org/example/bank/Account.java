@@ -15,6 +15,22 @@ public class Account {
         this.client = client;
     }
 
+    void deposit(BigDecimal amount) {
+        balance = balance.add(amount);
+    }
+
+    void withdraw(BigDecimal amount) {
+        balance = balance.subtract(amount);
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
